@@ -6,22 +6,26 @@
 @import "mixin", "variables";
 
 
-@import "compass/reset/utilities";
-@import "compass/layout";
+@import "normalize";
+@import "compass/css3";
+@import "compass/support";
 
-@include sticky-footer(30px);
+@debug browsers();
+$supported-browsers: chrome ie firefox;
+$browsers-minimum-versions: ("ie": "8");
 
-#root {
-	@include grid-background;
+.webdemo-sec {
+	position: relative;
+	width: 100px;
+	top: 10px;
+	@include box-shadow(1px 1px 3px 2px #cfcecf);
 }
-.reset-sec {
-	@include nested-reset;
+
+.btn {
+	margin-top: 20px;
+	@include appearance("button");
 }
 
-.text-line-block {
-	display: block;
-}
-
-.stretch-full {
-	@include stretch(5px, 5px, 5px, 5px);
+div {
+	@include box-sizing(border-box);
 }
