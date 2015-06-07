@@ -1,0 +1,6 @@
+@import "compass/utilities/sprites";
+
+$logo-sprite-dimensions: true;
+@import "logo/*.png";
+
+@include all-logo-sprites();

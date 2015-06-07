@@ -4,7 +4,7 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "mixin", "variables";
-
+@import "icons";
 
 // @import "normalize";
 @import "compass/reset";
@@ -14,6 +14,8 @@
 @import "compass/typography/lists";
 @import "compass/typography/text";
 @import "compass/typography/vertical_rhythm";
+@import "compass/utilities/color";
+@import "compass/utilities/general";
 
 @debug browsers();
 $supported-browsers: chrome ie firefox;
@@ -128,3 +130,8 @@ p {
 	background-image: image-url("analyzer.png");
 }
 
+.clearfix {
+	// @include clearfix();
+	// @include pie-clearfix();
+	@include legacy-pie-clearfix();
+}
