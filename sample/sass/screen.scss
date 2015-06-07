@@ -123,4 +123,8 @@ p {
 	@include trailer();
 }
 
+.analyzer-logo {
+	// background-image: inline-image("analyzer.png")
+	background-image: image-url("analyzer.png");
+}
 
